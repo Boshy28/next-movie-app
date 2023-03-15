@@ -3,7 +3,7 @@ import { request } from '@/utils/common';
 export default async function handler(req, res) {
   try {
     const { data } = await request({
-      url: `title/v2/find`,
+      url: `title/v2/find/`,
       params: { ...req.query },
     });
     if (data) {
