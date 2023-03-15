@@ -22,7 +22,6 @@ function App({ Component, pageProps }) {
       <Head>
         <title>The best movie app</title>
         <meta name="description" content="Movie app"></meta>
-        <link ref="icon" href="/favicon.ico"></link>
       </Head>
       <main className={styles.main}>
         <Component {...pageProps} />
