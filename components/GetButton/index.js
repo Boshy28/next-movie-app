@@ -21,6 +21,7 @@ const GetButton = ({ text = 'Get a movie', cn = '' }) => {
 
     if (filtered.length) {
       setLoading(true);
+
       const random = getRandom(filtered.length);
       const newId = getIdFromKey(filtered[random]);
 

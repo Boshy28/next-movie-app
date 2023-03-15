@@ -35,8 +35,8 @@ const MovieItem = ({
     const random = getRandom(data.length);
     const id = getIdFromKey(data[random]);
 
-    await setItems(data);
     router.push(`${BASE_URL}/${id}`).then(() => setLoading(false));
+    setItems({ data });
   };
 
   return (
