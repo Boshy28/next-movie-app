@@ -1,10 +1,4 @@
-## Getting Started
-
-Visit [the site](next-movie-app-one.vercel.app)
-
-##
-
-Or, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
