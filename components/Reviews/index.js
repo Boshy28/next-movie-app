@@ -14,7 +14,7 @@ const Reviews = ({ id }) => {
   useEffect(() => {
     const fetchReviews = async () => {
       setPending(true);
-      const { data } = await axios.get(`${BASE_URL}/api/reviews?id=${getIdFromKey(id)}`);
+      const { data } = await axios.get(`${BASE_URL}/api/reviews?id=${getIdFromKey(id)}/`);
 
       setReviews(data.reviews);
       setPending(false);

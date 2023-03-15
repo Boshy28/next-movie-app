@@ -31,7 +31,7 @@ const Search = () => {
 
       setItems({ data: ids });
 
-      router.push(`${BASE_URL}/${getIdFromKey(ids[0])}`);
+      router.push(`${BASE_URL}/${getIdFromKey(ids[0])}/`);
     }
 
     setEmpty(!results?.length);

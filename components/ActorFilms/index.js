@@ -14,7 +14,7 @@ const ActorFilms = ({ id }) => {
   useEffect(() => {
     const fetchFilms = async () => {
       setLoading(true);
-      const { data } = await axios.get(`${BASE_URL}/api/filmography?id=${getIdFromKey(id)}`);
+      const { data } = await axios.get(`${BASE_URL}/api/filmography?id=${getIdFromKey(id)}/`);
 
       console.log(data);
       const filtered = data.filmography.filter(({ status, titleType, image }) => {
@@ -35,7 +35,7 @@ const ActorFilms = ({ id }) => {
           <Preloader />
         ) : (
           films.map(({ characters, id, image, title, year }) => (
-            <Link href={`${BASE_URL}/${getIdFromKey(id)}`} key={id} legacyBehavior>
+            <Link href={`${BASE_URL}/${getIdFromKey(id)}/`} key={id} legacyBehavior>
               <a className={styles.item}>
                 <div className={styles.image} style={{ backgroundImage: `url(${image.url})` }} />
 

@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   try {
     const { genre } = req.query;
     const { data } = await request({
-      url: `title/v2/get-popular-movies-by-genre/`,
+      url: `title/v2/get-popular-movies-by-genre`,
       params: { genre: genre },
     });
     if (data) {

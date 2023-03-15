@@ -14,7 +14,7 @@ const Cast = ({ id }) => {
   useEffect(() => {
     const fetchCast = async () => {
       setPending(true);
-      const { data } = await axios.get(`${BASE_URL}/api/cast?id=${getIdFromKey(id)}`);
+      const { data } = await axios.get(`${BASE_URL}/api/cast?id=${getIdFromKey(id)}/`);
 
       setCast([...data.cast.slice(0, 7)]);
       setPending(false);
@@ -30,7 +30,7 @@ const Cast = ({ id }) => {
       ) : (
         <div className={styles.list}>
           {cast.map(({ characters, id, image, name }) => (
-            <Link className={styles.item} href={`${BASE_URL}/actor/${getIdFromKey(id)}`} key={id}>
+            <Link className={styles.item} href={`${BASE_URL}/actor/${getIdFromKey(id)}/`} key={id}>
               <div className={styles.image} style={{ backgroundImage: `url(${image?.url})` }} />
 
               <div className={styles.info}>

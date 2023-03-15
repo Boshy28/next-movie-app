@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   try {
     const { id } = req.query;
     const { data } = await request({
-      url: `title/get-user-reviews/`,
+      url: `title/get-user-reviews`,
       params: { tconst: id },
     });
     if (data) {

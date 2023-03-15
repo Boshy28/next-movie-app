@@ -25,7 +25,7 @@ const GetButton = ({ text = 'Get a movie', cn = '' }) => {
       const random = getRandom(filtered.length);
       const newId = getIdFromKey(filtered[random]);
 
-      router.push(`${BASE_URL}/${newId}`).then(() => setLoading(false));
+      router.push(`${BASE_URL}/${newId}/`).then(() => setLoading(false));
     }
   };
 

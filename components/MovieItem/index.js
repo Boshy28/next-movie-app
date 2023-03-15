@@ -30,12 +30,12 @@ const MovieItem = ({
 
     setLoading(true);
     const type = genre.replaceAll(' ', '-').toLowerCase();
-    const { data } = await axios.get(`${BASE_URL}/api/genres?genre=${type}`);
+    const { data } = await axios.get(`${BASE_URL}/api/genres?genre=${type}/`);
 
     const random = getRandom(data.length);
     const id = getIdFromKey(data[random]);
 
-    router.push(`${BASE_URL}/${id}`).then(() => setLoading(false));
+    router.push(`${BASE_URL}/${id}/`).then(() => setLoading(false));
     setItems({ data });
   };
 
